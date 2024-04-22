@@ -69,17 +69,8 @@ document.querySelectorAll('.portfolio-inner').forEach(item => {
         const modalId = event.currentTarget.getAttribute('data-target');
         const modal = document.getElementById(modalId);
         modal.style.display = 'block';
-        modal.querySelector('.modal-content').style.overflowY = 'auto'; // 모달 내부에만 스크롤 적용
-        document.body.style.overflow = 'hidden'; // 전체 스크롤 막기
-    });
-});
-
-// 모달 닫기
-document.querySelectorAll('.modal .close').forEach(item => {
-    item.addEventListener('click', event => {
-        const modal = event.currentTarget.closest('.modal');
-        modal.style.display = 'none';
-        document.body.style.overflow = ''; // 스크롤 허용
+        modal.querySelector('.modal-content').style.overflowY = 'auto';
+        document.body.style.overflow = 'hidden'; 
     });
 });
 
@@ -88,7 +79,17 @@ window.addEventListener('click', event => {
     document.querySelectorAll('.modal').forEach(modal => {
         if (event.target === modal) {
             modal.style.display = 'none';
-            document.body.style.overflow = ''; // 스크롤 허용
+            document.body.style.overflow = ''; 
+        }
+    });
+});
+
+//esc 닫기
+window.addEventListener('keydown', event => {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
 });
