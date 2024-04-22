@@ -326,15 +326,16 @@ section .do-meTool .do-inner:hover .icon i{
 section .portfolio-me::after{
     content: "";
     display: block;
+    clear: both; /* float 요소 해제 */
 }
 section .portfolio-me .portfolio-inner{
     width:30%;
     margin-right:5%;
+    margin-bottom:5%;
     padding:1rem 1rem 1.5rem 1rem;
     float:left;
     background-color:#f8f8f8;
     border:1px solid #ccc;
-    margin-bottom: 11rem;
     cursor: pointer;
     
 }
@@ -343,7 +344,6 @@ section .portfolio-me .portfolio-inner:nth-child(3n){
 }
 section .portfolio-me .portfolio-inner img{
     width: 100%;
-    height: 150px;
     display: block;
 }
 section .portfolio-me .portfolio-inner:hover{
