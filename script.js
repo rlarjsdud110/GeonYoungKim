@@ -70,7 +70,7 @@ document.querySelectorAll('.portfolio-inner').forEach(item => {
         const modal = document.getElementById(modalId);
         modal.style.display = 'block';
         modal.querySelector('.modal-content').style.overflowY = 'auto';
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
     });
 });
 
@@ -79,7 +79,7 @@ window.addEventListener('click', event => {
     document.querySelectorAll('.modal').forEach(modal => {
         if (event.target === modal) {
             modal.style.display = 'none';
-            document.body.style.overflow = ''; 
+            document.body.style.overflow = '';
         }
     });
 });
@@ -91,5 +91,11 @@ window.addEventListener('keydown', event => {
             modal.style.display = 'none';
             document.body.style.overflow = '';
         }
+    });
+});
+
+document.querySelectorAll('.modal .close').forEach(function (closeButton) {
+    closeButton.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
     });
 });

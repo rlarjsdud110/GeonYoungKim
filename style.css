@@ -417,7 +417,21 @@ section .portfolio-me .portfolio-inner h3{
     margin: 1rem;
     vertical-align: middle; 
 }
+.close {
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
 
+.close:hover {
+    color: #ed4848;
+}
+
+.btn-close:hover {
+    color: #ed4848;
+}
 @media screen and (max-width: 1140px) {
     main .container{
         width:992px;
