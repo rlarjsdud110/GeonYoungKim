@@ -63,39 +63,3 @@ for (let i = 0; i < scrollMove.length; i++) {
 }
 
 
-// 모달 열기
-document.querySelectorAll('.portfolio-inner').forEach(item => {
-    item.addEventListener('click', event => {
-        const modalId = event.currentTarget.getAttribute('data-target');
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'block';
-        modal.querySelector('.modal-content').style.overflowY = 'auto';
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-// 모달 바깥 클릭시 닫기
-window.addEventListener('click', event => {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-});
-
-//esc 닫기
-window.addEventListener('keydown', event => {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.key === 'Escape' && modal.style.display === 'block') {
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-});
-
-document.querySelectorAll('.modal .close').forEach(function (closeButton) {
-    closeButton.addEventListener('click', function () {
-        this.closest('.modal').style.display = 'none';
-    });
-});
