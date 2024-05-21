@@ -84,7 +84,7 @@ main {
     width: 100%;
     height: 100vh;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/kk.jpg') center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/me/kk.jpg') center center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -110,15 +110,6 @@ main p {
     font-size: 1.25rem;
 }
 
-main p.download {
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 1rem 2rem;
-    margin-top: 3rem;
-    color: white;
-    font-weight: bold;
-}
-
 main button.mouse {
     background-color: transparent;
     border: none;
@@ -135,7 +126,7 @@ main button.mouse {
 main p.mouseScroll {
     font-size: 1.5rem;
     position: absolute;
-    bottom: 10rem;
+    bottom: 7rem;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -162,15 +153,15 @@ main h2 span::after {
 
 @keyframes upDown {
     0% {
-        bottom: 5rem;
+        bottom: 1rem;
     }
 
     50% {
-        bottom: 5.7rem;
+        bottom: 1.8rem;
     }
 
     100% {
-        bottom: 5rem;
+        bottom: 1rem;
     }
 }
 
@@ -341,7 +332,7 @@ section .do-meTool .do-inner:hover .icon i {
 
 /* background */
 .bg {
-    background: url('../images/me2.jpg') center center;
+    background: url('../images/me/me2.jpg') center center;
     background-size: cover;
     background-attachment: fixed;
     height: 450px;
@@ -390,12 +381,30 @@ section .portfolio-me .portfolio-inner strong {
 }
 
 section .portfolio-me .portfolio-inner h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 
+section .portfolio-me .portfolio-inner .click{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+section .portfolio-me .portfolio-inner .click button{
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    position: relative;
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+section .portfolio-me .portfolio-inner .click p {
+    font-size: 1rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
 
 @media screen and (max-width: 1140px) {
-
 
     main .container {
         width: 992px;
