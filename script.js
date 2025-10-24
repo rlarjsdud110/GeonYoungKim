@@ -62,12 +62,6 @@ for (let i = 0; i < scrollMove.length; i++) {
     })
 }
 
-const portfolioItems = document.querySelectorAll('.portfolio-inner');
-for (let i = 0; i < portfolioItems.length; i++) {
-    portfolioItems[i].addEventListener('click', function(){
-        const targetUrl = portfolioItems[i].getAttribute('data-url');
-        window.open(targetUrl, '_blank');
-    });
-}
+
 
 
