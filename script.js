@@ -1,7 +1,7 @@
 // 메인 텍스트 자동생성
 (function () {
     const spanEl = document.querySelector("main h2 span");
-    const textArr = ['안녕하세요 김건영 입니다!', 'BACK-END Developer!'];
+    const textArr = ['안녕하세요 김건영 입니다!', 'Developer!'];
     let index = 0;
     let currentText = textArr[index].split("");
 
